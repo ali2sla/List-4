@@ -17,5 +17,6 @@
       <Label fx:id="questionList" layoutX="14.0" layoutY="347.0" text="Question 1 of 10" />
       <Button fx:id="submitButton" layoutX="264.0" layoutY="63.0" mnemonicParsing="false" onAction="#bottomTextFieldReady" text="Submit" />
       <Pagination fx:id="page" layoutX="233.0" layoutY="187.0" pageCount="10" prefHeight="200.0" prefWidth="292.0" />
+      <Hyperlink fx:id="clearButton" layoutX="725.0" layoutY="33.0" onAction="#bottomTextFieldReady" text="Clear" />
    </children>
 </Pane>
