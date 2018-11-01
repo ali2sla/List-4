@@ -84,7 +84,6 @@ public class Model {
         sideListViewTexts.add(updatedText);
     }
 
-
     void setAllData(String updatedBottomTextFieldText, List<Label> updatedSideListView) {
         // Update the model with all text currently seen in View
         bottomTextFieldText = updatedBottomTextFieldText;
