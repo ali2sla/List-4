@@ -22,14 +22,14 @@ public class Controller {
 
     public void initialize() {
         currentQuestion = 0;
-        totalQuestions = 6;
-        questions = new String[totalQuestions];
+        totalQuestions = 5;
+        questions = new String[totalQuestions + 1];
         questions[0] = "Are you ready to start the survey?";
         questions[1] = "Question 1: What will you bring if you were stranded on an island?";
-        questions[2] = "Question 2: What will be your first meal if you cannot find land?";
-        questions[3] = "Question 3: How will you get home?";
-        questions[4] = "this is a test 5";
-        questions[5] = "this is a test 5";
+        questions[2] = "Question 2: If you receive a request to make dinner for the president, would you do it?";
+        questions[3] = "Question 3: If someone was coughing repeatedly at your restaurant after eating, what will you do?";
+        questions[4] = "Question 4: What is something that is in your closet?";
+        questions[5] = "Question 5: If free candy is free candy, would you go to the haunted house?";
 
         question.setText(questions[currentQuestion]);
         questionList.setText("Question " + currentQuestion + " of " + totalQuestions);
@@ -64,7 +64,23 @@ public class Controller {
         currentQuestion = currentQuestion + 1;
         question.setText(questions[currentQuestion]);
         questionList.setText("Question " + currentQuestion + " of " + totalQuestions);
+    }
 
+    public void backTextReady() {
+        currentQuestion = currentQuestion - 1;
+        question.setText(questions[currentQuestion]);
+        questionList.setText("Question " + currentQuestion + " of " + totalQuestions);
+    }
 
+    public void nextTextReady() {
+        currentQuestion = currentQuestion + 1;
+        question.setText(questions[currentQuestion]);
+        questionList.setText("Question " + currentQuestion + " of " + totalQuestions);
+    }
+
+    public void clearButtonReady() {
+        System.out.println("Controller cleared");
+        model.removeAllData(bottomTextField.getText(), sideListView.getItems());
+        model.save();
     }
 }

@@ -18,7 +18,7 @@ public class Main extends Application {
         myController = loader.getController();
 
         primaryStage.setTitle("Test");
-        primaryStage.setScene(new Scene(root, 800, 400));
+        primaryStage.setScene(new Scene(root, 882, 502));
         primaryStage.show();
     }
 

@@ -94,4 +94,14 @@ public class Model {
             sideListViewTexts.add(updatedSideListView.get(i).getText());
         }
     }
+    void removeAllData (String updatedBottomTextFieldText, List<Label> updatedSideListView) {
+        // Update the model with all text currently seen in View
+        bottomTextFieldText = "";
+
+        int length = updatedSideListView.size();
+        sideListViewTexts.clear();
+        for (int i = 0; i < length; i++) {
+            sideListViewTexts.remove(updatedSideListView.get(i).getText());
+        }
+    }
 }
